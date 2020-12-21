@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../icon/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.bj1{
+				background-image: url('../img/true (1).jpg');
+				background-size:100%;
+				padding:10px; 
+				margin: 20px;
+			}
+			.bj2{
+				margin:80px;
+			}
+			/*导航部分*/
+			.nav{
+				margin: 10px;
+			}
+			.navbar-default{
+				background-color: #d4dff5;
+				font: "楷体";
+				font-size: 16px;
+			}
+			.navbar-header img{
+				margin-right: 20px;
+				margin-top: 10px;
+				
+			}
+			.navbar-brand{
+				padding-top: 3px;
+				
+			}
+			.navbar-nav>li{
+				margin-left: 40px;
+			}
+			
+			.fa-heart-o:hover:before {
+				color: red;
+			  	content: "\f004";
+			}
+			.navbar-nav>li:hover{
+				color: red;
+			}
+			.bod{
+			     cursor: pointer;
+				 border:0px solid #fff;
+			     border-radius: 0;
+			     color: #ccc;
+			}
+			.bod:hover{
+			    cursor: pointer;
+			    border:0px solid #fff;
+			    border-bottom: 1px solid #ff0000;
+			    border-radius: 0;
+			    color: #000;
+			    font-weight: 400;
+			}
+			.container-fluid{
+				background-color: #fff;
+			}
+			.posi{
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			.btn-success{
+				background-color: #fae9b5;
+				border-color:#fae9b5;
+			}		
+			.btn-success:hover{
+				background-color:#333333b0;
+				border-color:#333333b0;
+			}
+			h1{
+				font-family: "楷体";
+				font-size: 24px;
+				color: #86cde18f;
+				padding-bottom: 10px;
+			}
+			label{
+				color: #6d784ba1;
+				font-family: "楷体";
+			}
+			.btn-danger{
+				background-color: #c3bb0785;
+				border-color: #c3bb0785;
+			}
+			.btn-danger:hover{
+				color: #000000;
+				background-color: #f4f4e3;
+				border-color: #f4f4e3;
+			}
+			/*页脚部分*/
+			.foot{
+				width: 100%;
+				height: 80px;
+				float: left;
+				margin-top: 80px;
+				background-color: rgba(66,74,79,1);
+			}
+			.design-foot{
+				color: #313131;
+				margin: 0 auto;
+				overflow: visible !important;
+				font-size: 14px;
+				text-align: center;
+			}
+			.c-copyright{
+				text-align: center;
+				margin-top: 22px;
+				color: #fff;
+			}
+			.c-copyright p{
+				margin-top: 5px;
+				color: #fff;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<!--导航部分-->
+			<nav class="navbar navbar-default navbar-fixed-top posi">
+				<div class="container-fluid">
+					<div class="container">	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#c1">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="#" class="navbar-brand"><img class="img-responsive" src="../img/logo.png" width="70%"></a> 
+						</div>
+						<div class="collapse navbar-collapse" id="c1">
+							<ul class="nav navbar-nav posi">
+								<li class="bod"><a href="../index.html">首页</a></li>
+								<li class="bod"><a href="jianjie.html"> 公司简介</a></li>
+								<li class="bod"><a href="zixun.html">新闻资讯</a></li>
+								<li class="bod"><a href="fuwu.html">客户服务</a></li>
+								<li class="bod"><a href="lianxi.html">联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		<div class="container-fluid bj2">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="onee bj1">
+					<h1 class="text-center">Personal Information</h1>
+					
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="name">姓名：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="name" placeholder="请输入姓名" v-model="newStudent.name"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="age">年龄：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="age" placeholder="请输入年龄" v-model="newStudent.age"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="phone">手机号：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="phone" placeholder="请输入手机号" v-model="newStudent.phone"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="sex">性别：</label>
+							<div class="col-sm-6 sex" >
+								<!--单选按钮传值是靠value属性赋值的-->
+								<input type="radio" name="gender" checked="checked" value="男" v-model="newStudent.gender"/>男 
+								&nbsp;
+								<input type="radio" name="gender" value="女" v-model="newStudent.gender"/>女
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="email">邮箱：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="email" placeholder="请输入邮箱" v-model="newStudent.email"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label"></label>
+							<div class="col-sm-6" >
+								<!--使用v-on.prevent来阻止默认事件。-->
+								<button class="btn btn-success" @click.prevent="addStudent()">添加信息</button>
+								<!--方法加小括号，计算属性不加-->
+							</div>
+						</div>
+						
+					</form>
+					</div>
+					<br />
+					<hr />
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-3 control-label"for="searchkey">查询关键字：</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="searchkey" placeholder="请输入查询关键字" v-model="searchkey"/>
+							</div>
+						</div>
+					</form>
+					
+					
+					<div class="btnwrap">
+						<!--为每一个按钮添加一个点击事件，点击事件方法就是通过不同的实参来传递一个不同排序的类型-->
+						<button class="btn btn-default" @click="setSortType(1)">按年龄升序</button>
+						<button class="btn btn-default" @click="setSortType(2)">按年龄降序</button>
+						<button class="btn btn-default" @click="setSortType(0)">按原来排序</button>
+						<br /><br />
+					</div>
+					
+					<table class="table table-hover table-bordered text-center">
+						<tr>
+							<td><strong>序号</strong></td>
+							<td><strong>姓名</strong></td>
+							<td><strong>年龄</strong></td>
+							<td><strong>性别</strong></td>
+							<td><strong>手机号</strong></td>
+							<td><strong>邮箱</strong></td>
+							<td><strong>操作</strong></td>
+						</tr>
+						<tr v-for="(student,index) in filterStudents" :key="index">
+							<!--v-show="student.name.indexOf(searchkey)>=0||student.gender.indexOf(searchkey)>=0||student.phone.indexOf(searchkey)>=0||String(student.age).indexOf(searchkey)>=0">-->
+							<!--indexOf()是一个数组的方法。arr.indexOf(a),如果包含a，返回a在数组中的索引值，如果不包含，则返回-1-->
+							<td>{{index+1}}</td>
+							<td>{{student.name}}</td>
+							<td>{{student.age}}</td>
+							<td>{{student.gender}}</td>
+							<td>{{student.phone}}</td>
+							<td>{{student.email}}</td>
+							<td><button class="btn btn-danger" @click="deleteStudent(index)">删除</button></td><!--index是实参-->
+						</tr>
+					</table>
+					
+				</div>
+			</div>
+			<div class="foot">
+				<div class="design-foot">
+					<div class="c-copyright">
+						Copyright © 2017 某某咨询有限公司.
+						<br />
+						<a href="#"><p>欢迎来到我的网站</p></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<script type="text/javascript">
+//			confirm()方法提供一个弹出框,有两个按钮,点击确定,返回true,点取消,返回false
+//			alert()方法提供一个弹出框
+//			prompt()方法提供一个弹出框
+			var vm = new Vue({
+				el:"#root",
+				data:{
+					students:[
+					{name:"张三",age:18,gender:"男",phone:"12343523488",email:"23528457834@qq.com"},
+					{name:"李四",age:14,gender:"女",phone:"13343523444",email:"23528457834@qq.com"},
+					{name:"王五",age:15,gender:"女",phone:"13543523434",email:"23528457834@qq.com"},
+					{name:"赵六",age:19,gender:"男",phone:"15843523421",email:"23528457834@qq.com"}
+					],
+					newStudent:{
+						name:"",age:"",gender:"女",phone:"",email:""
+					},
+					searchkey:"",
+					sortType:""//排序的类型
+				},
+				methods:{
+					addStudent:function(){
+						if(this.newStudent.name==""){
+							alert("姓名不能为空");
+							return;
+						}
+						if(this.newStudent.age==""){
+							alert("年龄不能为空");
+							return;
+						}
+						if(this.newStudent.phone==""){
+							alert("手机号不能为空");
+							return;
+						}
+						if(this.newStudent.email==""){
+							alert("邮箱不能为空");
+							return;
+						}
+						
+//						给students数组里添加一个新的内容对象,用的数组中的unshift方法 
+						this.students.unshift(this.newStudent)
+					},
+					deleteStudent:function(index){
+//						delet接收一个confirm()返回的布尔值
+						var delet = confirm("确定要删除  "+this.students[index].name+"  这条记录吗?")
+						if(delet){
+//							index表示形参,和上边的index不同,splice()第一个参数是从几开始删除,第二个参数是删除几个,后面如果还有参数,就是添加的内容
+//							index表示从index开始,删除一项
+							this.students.splice(index,1)//index是形参
+						}
+						return
+					},
+					//排序
+					setSortType(nmb){
+						//nmb=1升序排序，2是降序排序，0位原来的顺序
+						this.sortType = nmb
+						console.log(this.sortType)
+					} 
+				},
+				computed:{
+					//			数组的过滤
+					filterStudents:function(){
+						var vm = this
+						var filterarr=[];
+//						filter()方法创建一个新的数组,新数组中的元素是通过检查指定数组中符合条件的所有元素
+//						filter是对数组中的每一项运行,如果该函数会返回所有满足条件的项或者是元素
+						filterarr = this.students.filter(function(stu){
+							return stu.name.indexOf(vm.searchkey)>=0||stu.gender.indexOf(vm.searchkey)>=0||stu.phone.indexOf(vm.searchkey)>=0||String(stu.age).indexOf(vm.searchkey)>=0
+						})
+						//排序
+						if(this.sortType){
+							filterarr.sort(function(a,b){
+								if(vm.sortType===1){
+									return a.age-b.age  //升序
+								}else{
+									return b.age-a.age  //降序
+								}
+								
+							})
+						}
+						
+						return filterarr
+					}
+				} 
+			})
+		</script>
+	</body>
+</html>

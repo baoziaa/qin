@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../icon/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css"/>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*导航部分*/
+			.nav{
+				margin: 10px;
+			}
+			.navbar-default{
+				background-color: #d4dff5;
+				font: "楷体";
+				font-size: 16px;
+			}
+			.navbar-header img{
+				margin-right: 20px;
+				margin-top: 10px;
+				
+			}
+			.navbar-brand{
+				padding-top: 3px;
+				
+			}
+			.navbar-nav>li{
+				margin-left: 40px;
+			}
+			
+			.bod{
+			     cursor: pointer;
+				 border:0px solid #fff;
+			     border-radius: 0;
+			     color: #ccc;
+			}
+			.bod:hover{
+			    cursor: pointer;
+			    border:0px solid #fff;
+			    border-bottom: 1px solid #ff0000;
+			    border-radius: 0;
+			    color: #000;
+			    font-weight: 400;
+			}
+			.container-fluid{
+				background-color: #fff;
+			}
+			.posi{
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			
+			/*图片部分*/
+			.pic{
+				width: 100%;
+				margin-top: 82px;
+			}
+			.h1{
+				font-family: "微软雅黑";
+				font-size: 34px;
+			}
+			p{
+				font-family: "微软雅黑";
+				font-size: 24px;
+			}
+			a{
+				color: #000000;
+				text-decoration: none;
+			}
+			.dis{
+				margin-top:30px;
+			}
+			.dis img{
+				padding-left: 5px;
+				padding-right: 5px;
+				padding-bottom: 10px;
+			}
+			.dis .img-responsive{
+				width: 500px;
+			}
+			.col-xs-6 p{
+				margin-top:30px;
+				padding: 5px;
+				font-size: 14px;
+				font-family: "微软雅黑";
+				line-height: 30px;
+			}
+			/*页脚部分*/
+			.foot{
+				width: 100%;
+				height: 80px;
+				float: left;
+				margin-top: 80px;
+				background-color: rgba(66,74,79,1);
+			}
+			.design-foot{
+				color: #313131;
+				margin: 0 auto;
+				overflow: visible !important;
+				font-size: 14px;
+				text-align: center;
+			}
+			.c-copyright{
+				text-align: center;
+				margin-top: 22px;
+				color: #fff;
+			}
+			.c-copyright p{
+				margin-top: 5px;
+				color: #fff;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<!--导航部分-->
+			<nav class="navbar navbar-default navbar-fixed-top posi">
+				<div class="container-fluid">
+					<div class="container">	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#c1">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="#" class="navbar-brand"><img class="img-responsive" src="../img/logo.png" width="70%"></a> 
+						</div>
+						<div class="collapse navbar-collapse" id="c1">
+							<ul class="nav navbar-nav posi">
+								<li class="bod"><a href="../index.html">首页</a></li>
+								<li class="bod"><a href="jianjie.html"> 公司简介</a></li>
+								<li class="bod"><a href="zixun.html"> 新闻资讯</a></li>
+								<li class="bod"><a href="fuwu.html"> 客户服务</a></li>
+								<li class="bod"><a href="lianxi.html"> 联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="col-xs-12">
+				<div class="pic">
+					<img class="img-responsive" src="../img/gsjj1.jpg"/>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1>公司简介</h1>
+						<p>About&nbsp; Us</p>
+						<br />
+					</div>
+				</div>
+				<div class="row">
+					<div class="sy">
+						<i class="fa fa-2x fa-diamond" aria-hidden="true"></i>
+						<a href="index.html">首页</a>
+						<span>></span>
+						<span><a href="jianjie.html">公司简介</a></span>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-6 dis">
+							<img  src="../img/gsjj2.jpg"/>
+							<img  src="../img/gsjj3.jpg" />
+							<img class="img-responsive" src="../img/sy3.jpg"/>
+						</div>
+						<div class="col-xs-6">
+							<p>**咨询的前身是成立于1999年的国家经贸委信息中心，为国家各部委制定行业政策提供数据和信息支持。2008年，在国家统计局的支持下
+								，我公司作为独立的商业咨询机构成立，注册资金5000万元，是最早成立的专业市场研究公司之一。作为首批取得国家统计局涉外调查许
+								可资质的咨询机构，**咨询致力于为企业战略决策提供专业解决方案。
+								<br /><br /><br />
+								成立以来，一直作为独立的市场研究团体为企业、政府、科研院所提供战略转型、市场进入、行业投资可行评估、竞争对手研究、消费者研
+								究、海外市场开拓等方面的咨询与服务。尚普咨询累计完成各类咨询项目5000余项，年度营业额突破8000万元。
+								<br /><br /><br />
+								是一家全球性管理咨询公司，是世界领先的商业战略咨询机构，客户遍及所有行业和地区。BCG与客户密切合作，帮助他们辨别最具价 值的
+								发展机会，应对至关重要的挑战并协助他们进行业务转型。在为客户度身订制的解决方案中，我们融入对公司和市场态势的深刻洞察，并与
+								客户组织的各个层面 紧密协作。
+								<br /><br /><br />
+								我们在大中华区已运营了20多年，并分别设立了北京、香港、上海和台北四个办公室。我们的客户是来自于各个行业领域的跨国公司或本土
+								企业。我们利用国际最佳实践和本土经验及实战技术，帮助他们制定业务战略。
+						</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 dis1">
+							
+						</div>
+					</div>
+					<div class="col-xs-6">
+						
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="foot">
+				<div class="design-foot">
+					<div class="c-copyright">
+						Copyright © 2017 某某咨询有限公司. All Rights Reserved
+						<br />
+						<p>If you are interesting tourist, please contact me！</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#root",
+				data:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

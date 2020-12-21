@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../icon/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*导航部分*/
+			.nav{
+				margin: 10px;
+			}
+			.navbar-default{
+				background-color: #d4dff5;
+				font: "楷体";
+				font-size: 16px;
+			}
+			.navbar-header img{
+				margin-right: 20px;
+				margin-top: 10px;
+				
+			}
+			.navbar-brand{
+				padding-top: 3px;
+				
+			}
+			.navbar-nav>li{
+				margin-left: 40px;
+			}
+			
+			.fa-heart-o:hover:before {
+				color: red;
+			  	content: "\f004";
+			}
+			.navbar-nav>li:hover{
+				color: red;
+			}
+			.bod{
+			     cursor: pointer;
+				 border:0px solid #fff;
+			     border-radius: 0;
+			     color: #ccc;
+			}
+			.bod:hover{
+			    cursor: pointer;
+			    border:0px solid #fff;
+			    border-bottom: 1px solid #ff0000;
+			    border-radius: 0;
+			    color: #000;
+			    font-weight: 400;
+			}
+			.container-fluid{
+				background-color: #fff;
+			}
+			.posi{
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			
+			.beijing{
+				margin-top: 170px;
+				background-image: url('../img/bj.jpg');;
+				background-size:100%;
+			}
+			p{
+				font-family: "微软雅黑";
+				font-size: 30px;
+				margin-top: 10px;
+				line-height: 3em;
+				color: #fff;
+			}
+			span{
+				margin-top: 10px;
+				font-family: "微软雅黑";
+				font-size:14px;
+				
+				color: #fff;
+			
+			}
+			label{
+				color: #fff;
+			}
+			.btn-primary{
+				border-color:#cc0000 ;
+				background-color:#cc0000;
+			}
+			.btn-primary:hover{
+				border-color: #910d0d91;
+				background-color: #910d0d91;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<!--导航部分-->
+			<nav class="navbar navbar-default navbar-fixed-top posi">
+				<div class="container-fluid">
+					<div class="container">	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#c1">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="#" class="navbar-brand"><img class="img-responsive" src="../img/logo.png" width="70%"></a> 
+						</div>
+						<div class="collapse navbar-collapse" id="c1">
+							<ul class="nav navbar-nav posi">
+								<li class="bod"><a href="../index.html">首页</a></li>
+								<li class="bod"><a href="jianjie.html">公司简介</a></li>
+								<li class="bod"><a href="zixun.html">新闻资讯</a></li>
+								<li class="bod"><a href="fuwu.html">客户服务</a></li>
+								<li class="bod"><a href="lianxi.html">联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="container-fluid beijing">
+				<div class="col-xs-4 col-xs-offset-4 text-center">
+					<p>在线留言</p>
+					<span>有什么问题请留言，我们会在第一时间替您解答</span>
+				</div>
+				<div class="col-xs-6 col-xs-offset-3">
+					<hr />
+					<form class="form-horizontal text-center">
+								<div class="form-group">
+									<br />
+									<label class="col-sm-2 control-label" for="name">姓名：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="name" v-model="newStudent.name"/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="phone">手机：</label>
+									<div class="col-sm-10" >
+										<!--单选按钮传值是靠value属性赋值的-->
+										<input type="text" class="form-control" id="phone" v-model="newStudent.phone"/> 
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="text1">留言：</label>
+									<div class="col-sm-10" >
+										<!--单选按钮传值是靠value属性赋值的-->
+										<input type="text" class="form-control" id="text1"  v-model="newStudent.text1"/> 
+									</div>
+								</div>
+								
+								<div class="form-group ">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-8 text-center" >
+										<!--使用v-on.prevent来阻止默认事件。-->
+										<button class="btn btn-primary" @click.prevent="addStudent()">点击提交信息</button>
+										<br /><br />
+										<!--方法加小括号，计算属性不加-->
+									</div>
+								</div>
+								
+							</form>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#root",
+				data:{
+					students:[
+					
+					],
+					newStudent:{
+						name:"",phone:"",text1:""
+					}
+					
+				},
+				methods:{
+					addStudent:function(){
+						if(this.newStudent.name==""){
+							alert("姓名不能为空");
+							return;
+						}
+						if(this.newStudent.phone==""){
+							alert("手机不能为空");
+							return;
+						}
+						if(this.newStudent.text1==""){
+							alert("留言不能为空");
+							return;
+						}else{
+							//						给students数组里添加一个新的内容对象,用的数组中的unshift方法 
+						this.students.unshift(this.newStudent)
+						this.newStudent=""
+						alert("添加留言成功！")
+						}
+						
+
+					}
+				}
+				
+			})
+		</script>
+	</body>
+</html>

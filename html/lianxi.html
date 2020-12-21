@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../icon/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*导航部分*/
+			.nav{
+				margin: 10px;
+			}
+			.navbar-default{
+				background-color: #d4dff5;
+				font: "楷体";
+				font-size: 16px;
+			}
+			.navbar-header img{
+				margin-right: 20px;
+				margin-top: 10px;
+				
+			}
+			.navbar-brand{
+				padding-top: 3px;
+				
+			}
+			.navbar-nav>li{
+				margin-left: 40px;
+			}
+			
+			.fa-heart-o:hover:before {
+				color: red;
+			  	content: "\f004";
+			}
+			.navbar-nav>li:hover{
+				color: red;
+			}
+			.bod{
+			     cursor: pointer;
+				 border:0px solid #fff;
+			     border-radius: 0;
+			     color: #ccc;
+			}
+			.bod:hover{
+			    cursor: pointer;
+			    border:0px solid #fff;
+			    border-bottom: 1px solid #ff0000;
+			    border-radius: 0;
+			    color: #000;
+			    font-weight: 400;
+			}
+			.container-fluid{
+				background-color: #fff;
+			}
+			.posi{
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			
+			/*图片部分*/
+			.pic{
+				width: 100%;
+				margin-top: 82px;
+			}
+			.h1{
+				font-family: "微软雅黑";
+				font-size: 34px;
+			}
+			p{
+				font-family: "微软雅黑";
+				font-size: 24px;
+			}
+			a{
+				color: #000000;
+				text-decoration: none;
+			}
+			.tc{
+				background-color:#16bae829;
+			}	
+			.btn-primary{
+				background-color: #16bae84a;
+				border-color:#16bae84a;
+			}		
+			.btn-primary:hover{
+				background-color:#1676e869;
+				border-color:#1676e869;
+			}
+			/*页脚部分*/
+			.foot{
+				width: 100%;
+				height: 80px;
+				float: left;
+				margin-top: 80px;
+				background-color: rgba(66,74,79,1);
+			}
+			.design-foot{
+				color: #313131;
+				margin: 0 auto;
+				overflow: visible !important;
+				font-size: 14px;
+				text-align: center;
+			}
+			.c-copyright{
+				text-align: center;
+				margin-top: 22px;
+				color: #fff;
+			}
+			.c-copyright p{
+				margin-top: 5px;
+				color: #fff;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<!--导航部分-->
+			<nav class="navbar navbar-default navbar-fixed-top posi">
+				<div class="container-fluid">
+					<div class="container">	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#c1">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="#" class="navbar-brand"><img class="img-responsive" src="../img/logo.png" width="70%"></a> 
+						</div>
+						<div class="collapse navbar-collapse" id="c1">
+							<ul class="nav navbar-nav posi">
+								<li class="bod"><a href="../index.html">首页</a></li>
+								<li class="bod"><a href="jianjie.html">公司简介</a></li>
+								<li class="bod"><a href="zixun.html">新闻资讯</a></li>
+								<li class="bod"><a href="fuwu.html">客户服务</a></li>
+								<li class="bod"><a href="lianxi.html">联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="col-xs-12">
+				<div class="pic">
+					<img class="img-responsive" src="../img/lxwm1.jpg"/>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1>联系我们</h1>
+						<p>Contact&nbsp; Us</p>
+						<br />
+					</div>
+				</div>
+				<div class="row">
+					<div class="sy">
+						<i class="fa fa-2x fa-diamond" aria-hidden="true"></i>
+						<a href="index.html">首页</a>
+						<span>></span>
+						<span><a href="lianxi.html">联系我们</a></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+						<p  style="font-size: 26px;font-family: '楷体';margin: 30px;">在线留言</p>
+						<hr />
+						<form class="form-horizontal text-center">
+								<div class="form-group">
+									<br />
+									<label class="col-sm-2 control-label" for="name">姓名：</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="name" placeholder="请输入姓名" v-model="newStudent.name"/>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="text1">内容：</label>
+									<div class="col-sm-4 sex" >
+										<!--单选按钮传值是靠value属性赋值的-->
+										<input type="text" class="form-control" id="text1"  placeholder="请输入内容" v-model="newStudent.text1"/> 
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-4" >
+										<!--使用v-on.prevent来阻止默认事件。-->
+										<button class="btn btn-primary" @click.prevent="addStudent()">点击提交信息</button>
+										<!--方法加小括号，计算属性不加-->
+									</div>
+								</div>
+								
+							</form>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<br /><br /><br />
+						<table class="table table-hover table-bordered text-center">
+							<tr class="tc">
+								<td >序号</td>
+								<td>姓名</td>
+								<td>内容</td>
+							</tr>
+							<tr v-for="(student,index) in students" :key="index">
+								<!--v-show="student.name.indexOf(searchkey)>=0||student.gender.indexOf(searchkey)>=0||student.phone.indexOf(searchkey)>=0||String(student.age).indexOf(searchkey)>=0">-->
+								<!--indexOf()是一个数组的方法。arr.indexOf(a),如果包含a，返回a在数组中的索引值，如果不包含，则返回-1-->
+								<td>{{index+1}}</td>
+								<td>{{student.name}}</td>
+								<td>{{student.text1}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="foot">
+				<div class="design-foot">
+					<div class="c-copyright">
+						Copyright © 2019 某某咨询有限公司. 
+						<br />
+						<p>欢迎来到我的网站</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#root",
+				data:{
+					students:[
+					{name:"我",text1:"那时的你是最好的你 现在的我是最好的我 "},
+					{name:"李",text1:"人老了的好处，就是可失去的东西越来越少了"},
+					{name:"王*",text1:"世界上有太多孤独的人害怕先踏出第一步。"},
+					{name:"赵**",text1:" I want love or death. "}
+					],
+					newStudent:{
+						name:"",text1:""
+					}
+				},
+				methods:{
+					addStudent:function(){
+						if(this.newStudent.name==""){
+							alert("姓名不能为空");
+							return;
+						}
+						
+						if(this.newStudent.text1==""){
+							alert("内容不能为空");
+							return;
+						}else{
+							//						给students数组里添加一个新的内容对象,用的数组中的unshift方法 
+							this.students.unshift(this.newStudent)
+							this.newStudent=""
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

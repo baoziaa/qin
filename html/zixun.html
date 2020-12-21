@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../icon/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			/*导航部分*/
+			.nav{
+				margin: 10px;
+			}
+			.navbar-default{
+				background-color: #d4dff5;
+				font: "楷体";
+				font-size: 16px;
+			}
+			.navbar-header img{
+				margin-right: 20px;
+				margin-top: 10px;
+				
+			}
+			.navbar-brand{
+				padding-top: 3px;
+				
+			}
+			.navbar-nav>li{
+				margin-left: 40px;
+			}
+			
+			.fa-heart-o:hover:before {
+				color: red;
+			  	content: "\f004";
+			}
+			.navbar-nav>li:hover{
+				color: red;
+			}
+			.bod{
+			     cursor: pointer;
+				 border:0px solid #fff;
+			     border-radius: 0;
+			     color: #ccc;
+			}
+			.bod:hover{
+			    cursor: pointer;
+			    border:0px solid #fff;
+			    border-bottom: 1px solid #ff0000;
+			    border-radius: 0;
+			    color: #000;
+			    font-weight: 400;
+			}
+			.container-fluid{
+				background-color: #fff;
+			}
+			.posi{
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			
+			/*图片部分*/
+			.pic{
+				width: 100%;
+				margin-top: 82px;
+			}
+			.h1{
+				font-family: "微软雅黑";
+				font-size: 34px;
+			}
+			p{
+				font-family: "微软雅黑";
+				font-size: 24px;
+			}
+			a{
+				color: #000000;
+				text-decoration: none;
+			}
+			ul{
+				margin-top: 30px;
+			}
+			li{
+				list-style: none;
+			}
+			.row a{
+				cursor: pointer;
+				font-family: "微软雅黑";
+				font-size: 18px;
+				text-decoration: none;
+			}
+			.two{
+				height: auto;
+				padding: 0;
+				margin-left: 0;
+				margin-right: 10px;
+				overflow: hidden;
+			}
+			.three{
+				line-height: 26px;
+			}
+			.five{
+				font-size: 13px;
+				color: #999;
+				line-height: 26px;
+			}
+			.four p{
+				/*margin-top: 40px;*/
+				font-size: 13px;
+				color: #999;
+				line-height: 26px;
+			}
+			.two img{
+				cursor: pointer;
+				transition: all 1s;
+			}
+			.two img:hover{
+				transform: scale(1.1);
+			}
+			.four p:hover{
+				background-color: #000000;
+				color: #fff;
+			}
+			/*页脚部分*/
+			.foot{
+				width: 100%;
+				height: 80px;
+				float: left;
+				margin-top: 80px;
+				background-color: rgba(66,74,79,1);
+			}
+			.design-foot{
+				color: #313131;
+				margin: 0 auto;
+				overflow: visible !important;
+				font-size: 14px;
+				text-align: center;
+			}
+			.c-copyright{
+				text-align: center;
+				margin-top: 22px;
+				color: #fff;
+			}
+			.c-copyright p{
+				margin-top: 5px;
+				color: #fff;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<!--导航部分-->
+			<nav class="navbar navbar-default navbar-fixed-top posi">
+				<div class="container-fluid">
+					<div class="container">	
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#c1">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="#" class="navbar-brand"><img class="img-responsive" src="../img/logo.png" width="70%"></a> 
+						</div>
+						<div class="collapse navbar-collapse" id="c1">
+							<ul class="nav navbar-nav posi">
+								<li class="bod"><a href="../index.html">首页</a></li>
+								<li class="bod"><a href="jianjie.html"> 公司简介</a></li>
+								<li class="bod"><a href="zixun.html"> 新闻资讯</a></li>
+								<li class="bod"><a href="fuwu.html"> 客户服务</a></li>
+								<li class="bod"><a href="lianxi.html"> 联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="col-xs-12">
+				<div class="pic">
+					<img class="img-responsive" src="../img/xwzx1.jpg"/>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1>新闻中心</h1>
+						<p>News&nbsp; Center</p>
+						<br />
+					</div>
+				</div>
+				<div class="row">
+					<div class="sy">
+						<i class="fa fa-2x fa-diamond" aria-hidden="true"></i>
+						<a href="index.html">首页</a>
+						<span>></span>
+						<span><a href="zixun.html">新闻中心</a></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				<ul>
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx2.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">国核电力院签署马来西亚巴林基安项目设计合同</a></div>
+							<div class="row">
+								2015年1月29日，国核电力规划设计研究院与上海电气电站工程公司在北京签署了马来西亚巴林基安（Balingian）2 300MW燃煤电站项目工程设计和服务合同。
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+						
+					</li>
+					
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx3.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">中铁上海设计院集团有限公司总体设计的连淮扬镇铁路开工建设</a></div>
+							<div class="row">
+								2014年12月28日，中铁上海设计院集团有限公司总体设计的连淮扬镇铁路开工建设。连镇铁路地处我国东部沿海地带，是江苏省“三纵四横”快速铁路网的中轴线，是长三角城市群区...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx4.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">成都院设计木里河卡基娃水电站初期蓄水导流洞成功下闸</a></div>
+							<div class="row">
+								据介绍，在2015年1月8日12点18分，在参建各方的共同努力下，成都院设计的木里河卡基娃水电站初期蓄水导流洞成功下闸，标志着卡基娃水电站建设进入一个新的里程碑，为2月底...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx5.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">河南院完成上海庙～山东±800千伏特高压工程野外地质勘探工作</a></div>
+							<div class="row">
+								2015年1月27日，河南设计院承担的上海庙～山东 800千伏特高压工程(包11)野外地质勘探工作顺利完成，该院岩土专业技术人员顶风冒雪，坚守工地一个多月，为该工程的顺利推进...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx6.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">中国建筑标准设计研究院创新推动住宅产业化发展</a></div>
+							<div class="row">
+								作为我国现代建筑产业最具实力的综合性科技研发企业，中国建筑标准设计研究院（以下简称：标准院）十分关注建筑业对于环境所产生的影响。当前，建筑业在国民经济中起着举足...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx7.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">家电企业大幅采购机器人：效率相当于4个工人</a></div>
+							<div class="row">
+								顺德拟成立4亿元股权投资基金加速发展机器人(55.020, 0.19, 0.35%)公司的消息就像个炸药包，美的、海尔、海信等落户在顺德的家电工厂均纷纷大幅采购机器人，代替人力。南都...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx8.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">耐迪贤：成本不再是竞争力的核心因素</a></div>
+							<div class="row">
+								波士顿咨询公司（BCG）大中华区董事总经理兼资深合伙人耐迪贤在11月12日的财新峰会“跨国竞争力：外国公司与中国公司”分论坛上表示，在今天的中国本地公司与跨国公司竞争...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+					
+					<li class="one col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="two col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<img class="img-responsive" src="../img/xwzx9.jpg"/>
+						</div>
+						<div class="three col-xs-9 col-sm-9 col-md-9 col-lg-9">
+							<div class="row"><a href="">摇篮孕千金：中国婴幼儿产品市场调查</a></div>
+							<div class="row">
+								在强劲的可持续性增长因素驱动下，中国的婴幼儿产品市场在去年实现了两位数的增长。为深入了解这一市场，波士顿咨询公司消费者洞察智库（CCI）在 2010年上半年开展了一项规...
+							</div>
+						</div>
+						<div class="four col-xs-1 col-sm-1 col-md-1 col-lg-1">
+							<p>more <span>></span></p>
+							<br /><br />
+						</div>
+					</li>
+				</ul>
+				
+			
+			</div>
+			
+			<div class="foot">
+				<div class="design-foot">
+					<div class="c-copyright">
+						Copyright © 2017 某某咨询有限公司. 
+						<br />
+						<!--<p>欢迎来到我的网站</p>-->
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#root",
+				data:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>
